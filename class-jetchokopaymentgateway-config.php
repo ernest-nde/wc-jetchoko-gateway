@@ -44,7 +44,7 @@ class WC_Gateway extends WC_Payment_Gateway {
 
         add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 4);
 
-        add_action( 'woocommerce_thankyou_', array( $this, 'thankyou_page' ), 10, 5);
+        //add_action( 'woocommerce_thankyou', array( $this, 'thankyou_page' ), 10, 5);
         
     }
     
@@ -412,7 +412,7 @@ class WC_Gateway extends WC_Payment_Gateway {
     /**
      * Output for the order received page.
      */
-    public function thankyou_page() {
-        echo 'test test ans test once more';
-    }
+    // public function thankyou_page() {
+    //     echo 'test test ans test once more';
+    // }
 }
