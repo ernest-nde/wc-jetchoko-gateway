@@ -412,7 +412,9 @@ class WC_Gateway extends WC_Payment_Gateway {
     /**
      * Output for the order received page.
      */
-    // public function thankyou_page() {
-    //     echo 'test test ans test once more';
-    // }
+    public function thankyou_page() {
+        if ( $this->message ) {
+            echo wpautop( wptexturize( $this->message ) );
+        }
+    }
 }
